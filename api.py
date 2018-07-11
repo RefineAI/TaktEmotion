@@ -18,8 +18,8 @@ ageGenderCache = {}
 UPLOAD_FOLDER = "/home/icarus/projects/AgeGender/cgi-bin/static/"
 
 
-#@app.route('/frame' ,methods=['GET', 'POST', 'OPTIONS'])
-#@cross_origin()
+@app.route('/frame' ,methods=['GET', 'POST', 'OPTIONS'])
+@cross_origin()
 def processFrame():
     print ("In Frame")
 
@@ -78,4 +78,4 @@ def default():
 
 if __name__ == '__main__':
     #processFrame()
-   app.run(host='0.0.0.0', port=80, threaded=True, debug=True)
+   app.run(host='0.0.0.0', port=8080, threaded=True, debug=True)
